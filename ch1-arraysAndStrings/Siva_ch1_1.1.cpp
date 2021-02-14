@@ -1,7 +1,6 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-using namespace string;
 
 bool IsStrUnique( string str )
 {
