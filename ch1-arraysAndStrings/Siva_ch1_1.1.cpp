@@ -1,27 +1,28 @@
 #include <iostream>
-using namespace std, string
+#include <bits/stdc++.h>
+using namespace std;
+using namespace string;
 
-bool IsStrUnique( string *str )
+bool IsStrUnique( string str )
 {
- if ( NULL == str )
- {	return false; }
- for (int i = 0; i < strlen(str)-1; i++)
-{
- 	for ( int j=1; s[j]!='\0'; j++)
-	{
-        	if ( s[i] == s[j] )
-		{   return false; }
+ 	if ( NULL == str )
+ 		{  return false; }
+	
+ 	for (int i = 0; i < str.length() - 1; i++) {
+	 	for ( int j=1; j < str.length(); j++) {
+        		if ( str[i] == str[j] )
+			{   return false; }
+		}
 	}
-}
- return true;
+ 	return true;
 }
 
 
 int main()
 {
- string str = "Im not a unique string"
- if ( IsStrUnique(str) )
- { cout << "The string %s is unique."<<str; }
-else
- { cout << "The string %s is not unique."" << str; }
+ 	string str = "Im not a unique string";
+ 	if ( IsStrUnique(str) )
+ 		{ cout << "The string "<< str << " is unique."<<endl; }
+	else
+ 		{ cout << "The string " << str << " is not unique." << endl; }
 }
